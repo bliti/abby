@@ -13,27 +13,7 @@ class AppTestCase(unittest.TestCase):
     def test_index_page(self):
         r = self.app.get('/')
         self.assertEquals('200 OK', r.status)
-        self.assertTrue('WutBot' in r.data)
-
-
-    def test_blog_redirect(self):
-        r = self.app.get('/blog')
-        self.assertEquals('302 FOUND', r.status)
-
-
-    def test_twitter_redirect(self):
-        r = self.app.get('/twitter')
-        self.assertEquals('302 FOUND', r.status)
-
-    
-    def test_youtube_redirect(self):
-        r = self.app.get('/youtube')
-        self.assertEquals('302 FOUND', r.status)
-
-    
-    def test_store_redirect(self):
-        r = self.app.get('/store')
-        self.assertEquals('302 FOUND', r.status)
+        self.assertTrue('Abby' in r.data)
 
 
     def tearDown(self):
